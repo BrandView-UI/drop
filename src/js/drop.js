@@ -370,6 +370,10 @@ function createContext(options={}) {
       if (this.isOpened()) {
         return;
       }
+      
+      if (!this.drop) {
+        return;
+      }
 
       if (!this.drop.parentNode) {
         document.body.appendChild(this.drop);
